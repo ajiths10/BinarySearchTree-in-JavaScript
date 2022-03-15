@@ -66,15 +66,28 @@ class Node {
   
 
   let a = new BinarySeachTree();
-  a.insert(9)
-  a.insert(7)
-  a.insert(2)
-  a.insert(6)
-  a.insert(4)
-  a.insert(10)
-  a.insert(12)
-  a.insert(11)
-  a.insert(15)
+  a.insert(9);
+  a.insert(7);
+  a.insert(2);
+  a.insert(6);
+  a.insert(4);
+  a.insert(10);
+  a.insert(12);
+  a.insert(11);
+  a.insert(15);
   console.log(a.insert(8));
+
   console.log(a.find(2));
   console.log(a.find(5));
+  console.log(a.find(11));
+  a.find(15)
+  let aa = JSON.stringify(a.insert(13))
+  console.log(aa);
+
+  let bb = JSON.stringify(a.find(11))
+  console.log(bb);
+
+
+  //make it in the frontend
+   let divht= document.getElementById('divpart');
+   divht.innerHTML=bb;
