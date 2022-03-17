@@ -62,6 +62,32 @@ class Node {
         
     
     }
+
+    Findmin(){
+        let currNode =this.root;
+        if(currNode===null){
+            console.log("Empty")
+            return -1;
+        }
+
+        while(currNode.left!=null){
+            currNode=currNode.left;
+        }
+        return currNode.value
+    }
+
+    findmax(){
+        let currNode =this.root;
+        if(currNode===null){
+            console.log("Empty")
+            return -1;
+        }
+
+        while(currNode.rigth!=null){
+            currNode=currNode.rigth;
+        }
+        return currNode.value
+    }
   }
   
 
@@ -87,7 +113,8 @@ class Node {
   let bb = JSON.stringify(a.find(11))
   console.log(bb);
 
-
-  //make it in the frontend
-   let divht= document.getElementById('divpart');
-   divht.innerHTML=bb;
+console.log(`Min =${a.Findmin()}`);
+console.log(`Max =${a.findmax()}`);
+//   //make it in the frontend
+//    let divht= document.getElementById('divpart');
+//    divht.innerHTML=bb;
